@@ -8,6 +8,7 @@ AngularJS-Weather-App is a simple HTML/JS app preferably based on AngularJS v1 w
 If the user denies to share the location, It shows a little input form for entering postcode or country, and display the weather based on that location.
 
 #Test Unit is included
+Grunt, Karma and Jasmine for testing the code
 
 # Deployment
 
