@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for js\factories.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">js/</a> factories.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">4.76% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>1/21</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">4.76% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>1/21</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">vovApp
+	/*
+	* we define a new factory 
+	*and inject our original service so we can extend it properly
+	*/
+	.factory('getOpenWeatherMap', <span class="fstat-no" title="function not covered" >function($http){</span>
+		
+<span class="cstat-no" title="statement not covered" >		var API_ID = '26ebd56d290f2db6d9ca2aa38a830db9';</span>
+<span class="cstat-no" title="statement not covered" >		var apiUrl = 'http://api.openweathermap.org/data/2.5/weather';</span>
+&nbsp;
+		// instantiate our initial object by country
+<span class="cstat-no" title="statement not covered" >		var getOpenWeatherMap = <span class="fstat-no" title="function not covered" >function(country, zip, lat, long) {</span></span>
+<span class="cstat-no" title="statement not covered" >			this.country = country;</span>
+<span class="cstat-no" title="statement not covered" >			this.weather = null;</span>
+<span class="cstat-no" title="statement not covered" >			this.zip = zip;</span>
+<span class="cstat-no" title="statement not covered" >			this.lat = lat;</span>
+<span class="cstat-no" title="statement not covered" >			this.long = long;</span>
+		}
+&nbsp;
+		// define the getWeather method which will fetch data
+	    // from openweathermap API and *returns* a promise
+<span class="cstat-no" title="statement not covered" >	    getOpenWeatherMap.prototype.getWeather = <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >			var self = this;</span>
+<span class="cstat-no" title="statement not covered" >			var params = '';</span>
+<span class="cstat-no" title="statement not covered" >			if(this.country != null ){</span>
+<span class="cstat-no" title="statement not covered" >				params = '?q=' + this.country;</span>
+			}else <span class="cstat-no" title="statement not covered" >if(this.lat != null &amp;&amp; this.long != null){</span>
+<span class="cstat-no" title="statement not covered" >				params = '?lat=' + this.lat + '&amp;lon=' + this.long;</span>
+			}else{
+<span class="cstat-no" title="statement not covered" >				params = '?zip=' + this.zip;</span>
+			}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	        return $http.get(apiUrl + params + '&amp;APPID=' + API_ID).then(<span class="fstat-no" title="function not covered" >function(response) {</span></span>
+	            // when we get the results we store the data in weather
+<span class="cstat-no" title="statement not covered" >	            self.weather = response.data</span>
+<span class="cstat-no" title="statement not covered" >	            return response;</span>
+	        });
+	    };
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >		return getOpenWeatherMap;</span>
+	})</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Oct 07 2016 12:47:10 GMT+0000 (Greenwich)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

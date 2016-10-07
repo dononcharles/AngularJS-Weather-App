@@ -1,0 +1,63 @@
+<header id="header" data-current-skin={{mactrl.currentSkin}} data-ng-include="'template/header.html'" data-ng-controller="headerCtrl as hctrl"></header>
+<section id="main">
+    <section id="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="card">
+                        <div class="card-header bgm-red ch-alt m-b-20">
+                            <h2>README</h2>
+                        </div>
+                        <div class="card-body card-padding">
+                            <p style="font-weight: unset;">This AngularJS app displays weather on your current location via latitude & longitude.<br/> Before showing the weather according to your current position, you must autorize your navigator geolocation.<br/><br/> You have also the possibility to search for current weather by country code or country or zip code.<br/> If you have not autorized your navigator geolocation,completes the form in your right side. Thanks!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-header bgm-green m-b-20">
+                            <h2> Check current weather </h2>
+
+                            <button ng-click="getCurrentWeather()" class="btn bgm-blue btn-float waves-effect"><i class="zmdi zmdi-mail-send"></i></button>
+                        </div>
+
+                        <div class="card-body card-padding">
+                            <label class="radio radio-inline m-l-15 m-b-15">
+                                <input type="radio" name="typeradion" ng-model="geo.type" value="q" >
+                                <i class="input-helper"></i>
+                                Country or Country code
+                            </label>
+                            <label class="radio radio-inline m-l-20 m-b-15">
+                                <input name="typeradio" type="radio" ng-model="geo.type" ng value="zip">
+                                <i class="input-helper"></i>
+                                Zip Code
+                            </label>
+                            <div class="input-group m-b-20">
+                                <span class="input-group-addon"><i class="zmdi zmdi-globe"></i></span>
+                                <div class="fg-line">
+                                    <input type="text" ng-model="geo.country" class="form-control" placeholder="Enter a Country or Country Code or Zip code">
+                                </div>
+                            </div>
+
+                            <span class="{{geo.errorfindclasse}}">{{geo.errorfindmsg}}</span>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dash-widgets">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="dash-widget-item bgm-lime">
+                            <loading></loading>
+                            <div id="weather-widget" data-weather-widget><p style="margin-top:10%;text-align: center;margin-left: 10%;margin-right: 10%;padding-left: 10%;padding-right: 10%;font-size: 30px;">Weather Informations Come Here!</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </section>
+</section>
+<footer id="footer" data-ng-include="'template/footer.html'"></footer>
